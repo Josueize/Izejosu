@@ -5,11 +5,13 @@
 
 int registro()
 {
+	//inicio criacao de variaveis/string
 	char arquivo[40];
 	char cpf[40];
 	char nome[40];
 	char sobrenome[40];
 	char cargo[40];
+	//final da criacao de variaveis/string
 	
 	printf("Digite o CPF a ser cadastrado: ");
 	scanf("%s", cpf);
@@ -127,29 +129,32 @@ int main()
 	 printf("\t1 - Registrar nomes\n");
 	 printf("\t2 - Consultar nomes\n");
 	 printf("\t3 - Deletar nomes\n\n");
+	 printf("\t4 - sair do sistema\n\n");
 	 printf("opcao: ");//fim do menu
 	
 	 scanf("%d", &opcao); //armazenando a escolha do usuario
 	
 	 system("cls");
 	
-	
 	 switch(opcao)
 	 {
 	 	case 1:
-	 	printf("voce escolheu o registro nome!\n");
-	 	system("pause");
+	 	registro(); //chama de funcoes
 	 	break;
 	 	
 	 	case 2:
-	 	printf("Voce escolheu consultar os nomes!\n");
-	   	system("pause");
+	 	consulta();
 	   	break;
 	   	
 	   	case 3:
-	   	printf(" Voce escolheu deletar nomes!\n");
-	 	system("pause");
+	   	deletar();
 	 	break;
+	 	
+	 	case 4:
+	 	printf(" Obrigado por utilizar o sistema!\n");
+	 	return 0;
+	 	break;
+	 	
 	 	
 	 	default:
 	 	printf("Essa opcao nao esta disponivel!\n");
